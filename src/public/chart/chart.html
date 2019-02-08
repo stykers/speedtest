@@ -197,7 +197,7 @@
             document.getElementById('startBtn').style.display = 'none';
             document.getElementById('testArea').style.display = '';
             document.getElementById('abortBtn').style.display = '';
-            w = new Worker('speedtest.min.js');
+            w = new Worker('../speedtest.min.js');
             var interval = setInterval(function () { w.postMessage('status') }, 100);
             w.onmessage = function (event) {
                 var data = JSON.parse(event.data);
